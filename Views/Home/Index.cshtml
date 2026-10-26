@@ -1,0 +1,6 @@
+@{ViewData["Title"]="Laboratório de Codificação Segura";}
+<div class="container py-5"><div class="text-center mb-5"><h1 class="display-4 fw-bold">Laboratório de Codificação Segura</h1><p class="lead">Demonstração prática de vulnerabilidades Web e suas correções.</p><span class="badge bg-success">ASP.NET Core MVC | C#</span></div>
+<div class="row g-4">
+@foreach(var item in new[]{("SQL Injection","Compare consulta vulnerável e consulta parametrizada.","SqlInjection"),("Cross-Site Scripting (XSS)","Veja a diferença entre HTML interpretado e texto seguro.","Xss"),("Cross-Site Request Forgery (CSRF)","Demonstre a proteção antifalsificação em formulários.","Csrf")}) {
+<div class="col-md-4"><div class="card h-100 shadow-sm"><div class="card-body"><h3>@item.Item1</h3><p>@item.Item2</p><a class="btn btn-primary" asp-controller="@item.Item3" asp-action="Index">Acessar demonstração</a></div></div></div>
+}</div><div class="alert alert-info mt-5"><strong>Ambiente educacional:</strong> exemplos locais e dados fictícios.</div></div>
